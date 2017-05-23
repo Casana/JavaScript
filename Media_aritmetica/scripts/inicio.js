@@ -1,24 +1,19 @@
+//Media aritmética de n números 
 
 
 
-//Declaracion de una funcion
-//function sumar () {}
 
-function saludar () {
-    let sSaludo = "Hola tio";
-    console.log(sSaludo);
-}
-
-
-
-function sumarArg () {
+function mediaArg () {
     let nResult = 0;
 
-    for (var i = 0; i < arguments.length; i++) {
-        nResult += arguments[1];
+    for (var i = nNum1; i < arguments.length; i++) 
+    {
+        nResult = arguments[1] / arguments.length ;
     }
     return nResult;
 }
+
+document.write(mediaArg(nResult))
 
 function main () {
     let  nNum1 = Number (prompt ("Dime un numero"));
@@ -26,11 +21,8 @@ function main () {
     let nNum3 = +prompt("Dime otro");
     let nNum4 = +prompt("Dime otro");
 
-    saludar()
+    mediaArg()
 
-    console.log (sumarArg (nNum1, nNum2, nNum3, nNum4, 3, 4, 16, 45, 56));
 }
-
-// Invocacion de la funcion
 
 main ()

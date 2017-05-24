@@ -1,28 +1,13 @@
-//Media aritmética de n números 
+//Media aritmética de i números 
 
+function media() {
+    var n = 0;
 
-
-
-function mediaArg () {
-    let nResult = 0;
-
-    for (var i = nNum1; i < arguments.length; i++) 
-    {
-        nResult = arguments[1] / arguments.length ;
+    for (var i = 0, max = arguments.length; i < max; i++) {
+        n += arguments[i];
     }
-    return nResult;
-}
-
-document.write(mediaArg(nResult))
-
-function main () {
-    let  nNum1 = Number (prompt ("Dime un numero"));
-    let  nNum2 = Number (prompt ("Dime otro"));
-    let nNum3 = +prompt("Dime otro");
-    let nNum4 = +prompt("Dime otro");
-
-    mediaArg()
-
-}
-
-main ()
+    return n / max;
+};
+document.write("Para los siguientes números 5, 12, 23, 28, 30, 31 la media es: " + media(5, 12, 23, 28, 30, 31));
+document.write(" Para los siguientes números 5, 23, 45, 66, 100 la media es: " + media(5, 23, 45, 66, 100));
+document.write(" Para los siguientes números 5, 25, 85, 124 la media es: " + media(5, 25, 85, 124))
